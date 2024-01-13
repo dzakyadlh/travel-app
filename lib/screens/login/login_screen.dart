@@ -20,6 +20,9 @@ class _LoginScreenState extends State<LoginScreen> {
       email = emailController.text;
       password = passwordController.text;
     });
+    if (email == "admin@gmail.com" && password == "admin123") {
+      Navigator.pushNamedAndRemoveUntil(context, '/main', (_) => false);
+    }
   }
 
   @override
