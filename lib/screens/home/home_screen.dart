@@ -159,55 +159,59 @@ class BigCardSlider extends StatelessWidget {
           itemBuilder: (_, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 16),
-              child: Container(
-                width: 180,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                    image: const DecorationImage(
-                        image: AssetImage("assets/images/shibuyacrossing.jpg"),
-                        fit: BoxFit.cover),
-                    borderRadius: BorderRadius.circular(25)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.black45,
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  width: 180,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                      image: const DecorationImage(
+                          image:
+                              AssetImage("assets/images/shibuyacrossing.jpg"),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.black45,
+                        ),
+                        child: const Text(
+                          "Shibuya Crossing",
+                          style: TextStyle(color: Colors.white, fontSize: 10),
+                        ),
                       ),
-                      child: const Text(
-                        "Shibuya Crossing",
-                        style: TextStyle(color: Colors.white, fontSize: 10),
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Colors.black45,
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.red,
-                                size: 10,
-                              ),
-                              Text(
-                                "4.5",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    )
-                  ],
+                      Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.black45,
+                            ),
+                            child: const Row(
+                              children: [
+                                Icon(
+                                  Icons.star,
+                                  color: Colors.red,
+                                  size: 10,
+                                ),
+                                Text(
+                                  "4.5",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 10),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             );
@@ -238,50 +242,56 @@ class CardItemsList extends StatelessWidget {
         return Padding(
           padding:
               const EdgeInsets.only(bottom: 4.0), // Add space between each card
-          child: Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        "assets/images/shibuyacrossing.jpg",
-                        fit: BoxFit.cover, // Use cover to maintain aspect ratio
+          child: InkWell(
+            onTap: () {},
+            child: Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 48,
+                      height: 48,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          "assets/images/shibuyacrossing.jpg",
+                          fit: BoxFit
+                              .cover, // Use cover to maintain aspect ratio
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 8), // Add space between image and text
-                  Expanded(
-                    flex: 3,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          names[index],
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        const Text("Tokyo, Japan")
-                      ],
+                    const SizedBox(
+                        width: 8), // Add space between image and text
+                    Expanded(
+                      flex: 3,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            names[index],
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const Text("Tokyo, Japan")
+                        ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 8), // Add space between text and rating
-                  const Expanded(
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.red,
-                        ),
-                        Text("4.5")
-                      ],
+                    const SizedBox(
+                        width: 8), // Add space between text and rating
+                    const Expanded(
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.red,
+                          ),
+                          Text("4.5")
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

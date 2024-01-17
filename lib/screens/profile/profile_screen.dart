@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: const Card(
-                color: Colors.lightGreen,
+                elevation: 5.0,
                 child: Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Row(
