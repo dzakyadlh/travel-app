@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16.0), // Added padding
+                const SizedBox(height: 16.0), // Added padding
                 TextFormField(
                   controller: emailController,
                   decoration: const InputDecoration(
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0), // Added padding
+                const SizedBox(height: 16.0), // Added padding
                 TextFormField(
                   controller: passwordController,
                   decoration: const InputDecoration(
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 32.0), // Added more padding
+                const SizedBox(height: 32.0), // Added more padding
                 Row(
                   children: [
                     Expanded(

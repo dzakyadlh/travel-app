@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:travelapp/screens/detail/detail.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,37 +7,37 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tokyo, Japan"),
+        title: const Text("Tokyo, Japan"),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.location_pin)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.location_pin)),
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-              HomeSearchBar(),
+              const HomeSearchBar(),
               CategoriesBar(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Popular",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
-                  TextButton(onPressed: () {}, child: Text("See all"))
+                  TextButton(onPressed: () {}, child: const Text("See all"))
                 ],
               ),
               BigCardSlider(),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "New and Noteworthy",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     textAlign: TextAlign.start,
@@ -66,9 +65,8 @@ class _HomeSearchBarState extends State<HomeSearchBar> {
 
   @override
   Widget build(BuildContext context) {
-    return SearchBar(
-      padding: const MaterialStatePropertyAll(
-          EdgeInsets.symmetric(horizontal: 16.0)),
+    return const SearchBar(
+      padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 16.0)),
       leading: Icon(Icons.search),
       hintText: "Find places to visit...",
     );
@@ -165,7 +163,7 @@ class BigCardSlider extends StatelessWidget {
                 width: 180,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage("assets/images/shibuyacrossing.jpg"),
                         fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(25)),
@@ -179,7 +177,7 @@ class BigCardSlider extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                         color: Colors.black45,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Shibuya Crossing",
                         style: TextStyle(color: Colors.white, fontSize: 10),
                       ),
@@ -192,7 +190,7 @@ class BigCardSlider extends StatelessWidget {
                             borderRadius: BorderRadius.circular(25),
                             color: Colors.black45,
                           ),
-                          child: Row(
+                          child: const Row(
                             children: [
                               Icon(
                                 Icons.star,
@@ -235,7 +233,7 @@ class CardItemsList extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       itemCount: 6,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (_, index) {
         return Padding(
           padding:
@@ -245,7 +243,7 @@ class CardItemsList extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 48,
                     height: 48,
                     child: ClipRRect(
@@ -256,7 +254,7 @@ class CardItemsList extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8), // Add space between image and text
+                  const SizedBox(width: 8), // Add space between image and text
                   Expanded(
                     flex: 3,
                     child: Column(
@@ -267,12 +265,12 @@ class CardItemsList extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        Text("Tokyo, Japan")
+                        const Text("Tokyo, Japan")
                       ],
                     ),
                   ),
-                  SizedBox(width: 8), // Add space between text and rating
-                  Expanded(
+                  const SizedBox(width: 8), // Add space between text and rating
+                  const Expanded(
                     child: Row(
                       children: [
                         Icon(

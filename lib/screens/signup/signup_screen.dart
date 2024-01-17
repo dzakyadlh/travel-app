@@ -51,7 +51,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextFormField(
                   controller: emailController,
                   decoration: const InputDecoration(
@@ -66,7 +66,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextFormField(
                   controller: usernameController,
                   decoration: const InputDecoration(
@@ -81,7 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextFormField(
                   controller: passwordController,
                   decoration: const InputDecoration(
@@ -96,7 +96,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextFormField(
                   controller: repeatPasswordController,
                   decoration: const InputDecoration(
@@ -109,7 +109,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 32.0),
+                const SizedBox(height: 32.0),
                 Row(
                   children: [
                     Expanded(

@@ -42,7 +42,7 @@ class LandingScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: FilledButton(
-                        child: Text("Login"),
+                        child: const Text("Login"),
                         onPressed: () {
                           Navigator.pushNamed(context, '/login');
                         },
@@ -54,7 +54,7 @@ class LandingScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        child: Text("Sign Up"),
+                        child: const Text("Sign Up"),
                         onPressed: () {
                           Navigator.pushNamed(context, '/signup');
                         },
